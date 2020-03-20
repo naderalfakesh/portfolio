@@ -1,5 +1,6 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles';
+import Typist from 'react-typist';
 
 const useStyles = makeStyles(theme => ({
   bgc: {
@@ -14,7 +15,9 @@ export default function Main() {
     const classes = useStyles();
     return (
         <div className={classes.bgc}>
-            Main
+            <Typist>
+                Animate this text.
+            </Typist>
         </div>
     )
 }
