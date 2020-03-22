@@ -21,7 +21,7 @@ export default function Contacts() {
     const classes = useStyles();
     return (
         <div className={classes.bgc}>
-             <SocialButton fontSize="70px" bg="#0077b5" bgl="#005f90" bgr="#1984bc">
+             <SocialButton href="https://www.linkedin.com/in/nadir-alfakesh" fontSize="70px" bg="#0077b5" bgl="#005f90" bgr="#1984bc">
                <LinkedInIcon fontSize="inherit" />
               </SocialButton>
              <SocialButton fontSize="70px" bg="#24292e" bgl="#1d2125" bgr="#2e343a">

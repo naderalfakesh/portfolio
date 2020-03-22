@@ -4,7 +4,7 @@ import Typist from "react-typist";
 
 const useStyles = makeStyles(theme => ({
   bgc: {
-    backgroundColor: "blue",
+    backgroundColor: "#f2f2f2",
     height: "100%",
     display: "flex",
     flexDirection: "column",

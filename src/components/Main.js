@@ -1,34 +1,45 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import ParticlesBg from 'particles-bg'
-import spaceBg from "../Assets/spaceBg.jpg"
+import spaceBg from "../Assets/spaceBg.jpg";
+import TypistMain from "./TypistMain"
 
 const useStyles = makeStyles(theme => ({
-  bgc: {
-    // backgroundColor: "white",
+  main: {
     backgroundImage: `url(${spaceBg})`,
     backgroundSize: "cover",
-    height: "100%"
+    height: "100%",
+    display: "flex",
+    flexDirection : "column",
+    justifyContent: "center",
+    alignItems: "center"
   },
+  
+  header: {
+    zIndex: 1,
+    color: "white",
+    "& h1": {
+      fontSize: "4em"
+    },
+    "& p": {
+      fontSize: "3em"
+    }
+  }
 }));
-
-let config = {
-
-};
 
 
 export default function Main() {
   const classes = useStyles();
-  return (
-    <div className={classes.bgc}>
-      <ParticlesBg 
-      type="cobweb" 
-      color="#ffffff"
-       num={75}   
-       config={config} 
-      //  bg={true} 
-       />
-     
+  return (<>
+    <div className={classes.main}>
+      <div className={classes.header}>
+        <h1>NADIR ALFAKESH</h1>
+        <p>WEB developer</p>
+      </div>
+
+      <div className={classes.header}>
+        <TypistMain />
+      </div>
     </div>
+    </>
   );
 }

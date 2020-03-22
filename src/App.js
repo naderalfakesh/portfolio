@@ -6,6 +6,7 @@ import Contacts from './components/Contacts';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
+import Particles from "./components/Particles"
 
 const useStyles = makeStyles(theme => ({
   fullHeight: {
@@ -18,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <CssBaseline />
+      <Particles />
       <Grid container>
         <Grid item xs={12} className={classes.fullHeight}><Main/></Grid>
         <Grid item xs={12} className={classes.fullHeight}><Portfolio/></Grid>

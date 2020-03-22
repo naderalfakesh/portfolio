@@ -63,6 +63,7 @@ export default function SocialButton(props) {
         <a 
         href={props.href || "/"}
         className={classes.link}
+        target="_blank" rel="noopener noreferrer"
         >
             {props.children}
         </a>
