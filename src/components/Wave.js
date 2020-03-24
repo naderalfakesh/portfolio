@@ -1,30 +1,23 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 
-const useStyles = makeStyles(theme => ({
-    wave: {
-        display: "inline-block",
-        position: "relative",
-        width: "100%",
-        paddingBottom: "100%",
-        verticalAlign: "middle",
-        overflow: "hidden",
-    },
-    svg:{
-        display: "inline-block",
-        position: "absolute",
-        bottom: 0,
-        left: 0,
-    }
-}));
 
-export default function Particles() {
+
+export default function Wave({color,flip,mirror}) {
+    const useStyles = makeStyles(theme => ({
+        svg:{
+            display: "inline-block",
+            position: "absolute",
+            bottom: 0,
+            left: 0,
+            zIndex: 400,
+            transform: `scale(${mirror ? -1: 1}, ${flip? -1: 1}) translate(0,${flip? "-98%": "0"}) `,
+        }
+    }));
   const classes = useStyles();
   return (
-    <div className={classes.wave}>
-        <svg className={classes.svg} viewBox="0 0 500 500" preserveAspectRatio="xMinYMin meet">
-            <path d="M0,100 C150,200 350,0 500,100 L500,00 L0,0 Z" style={{stroke: "none", fill:"#f2f2f2" }}></path>
+        <svg className={classes.svg} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill={color||"#fff"} fill-opacity="1" d="M0,192L60,208C120,224,240,256,360,277.3C480,299,600,309,720,288C840,267,960,213,1080,213.3C1200,213,1320,267,1380,293.3L1440,320L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
         </svg>
-    </div>
   );
 }

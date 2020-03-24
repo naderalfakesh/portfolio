@@ -2,6 +2,7 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 // import spaceBg from "../Assets/spaceBg.jpg";
 import TypistMain from "./TypistMain"
+import Wave from "./Wave"
 
 const useStyles = makeStyles(theme => ({
   main: {
@@ -46,6 +47,7 @@ export default function Main() {
       <div className={classes.header}>
         <TypistMain />
       </div>
+      <Wave color="#f1f1f1" mirror />
     </div>
     </>
   );

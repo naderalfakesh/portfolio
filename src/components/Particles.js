@@ -18,8 +18,8 @@ export default function Particles() {
     <div className={classes.particle}>
       <ParticlesBg
         type="cobweb"
-        color="#ffffff"
-        num={75}
+        color="#f1f1f1"
+        num={100}
         //  bg={true}
       />
     </div>

@@ -15,7 +15,8 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     justifyContent: "space-around",
     alignItems: "center",
-    padding: "30px 0"
+    // padding: "30px 0",
+    position: "relative"
   }
 })); 
 
@@ -28,7 +29,7 @@ export default function Portfolio() {
             <Card image={site1} title={"Website 1"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
             <Card image={site2} title={"Website 2"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
             <Card image={site3} title={"Website 3"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
-            {/* <Wave /> */}
+            <Wave color="#f2f2f2" flip mirror />
         </div>
     )
 }
