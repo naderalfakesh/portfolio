@@ -10,7 +10,7 @@ import Particles from "./components/Particles"
 
 const useStyles = makeStyles(theme => ({
   fullHeight: {
-    height: "100vh"
+    minHeight: "100vh"
   },
 }));
 
