@@ -5,6 +5,9 @@ import Toolbar from "@material-ui/core/Toolbar";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import Button from '@material-ui/core/Button';
+import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { useTheme } from '@material-ui/core/styles';
+import BackToTopButton from "./BackToTopButton"
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -12,10 +15,13 @@ function ElevationScroll(props) {
 
   const trigger = useScrollTrigger({
     disableHysteresis: true,
-    threshold: window.innerHeight-10
+    threshold: window.innerHeight-200
   });
+
   
 
+  const theme = useTheme()
+  const matches = useMediaQuery(theme.breakpoints.down('xs'));
 
   return React.cloneElement(
     !trigger ? (
@@ -26,9 +32,9 @@ function ElevationScroll(props) {
       </Slide>
     ),
     {
-      elevation: trigger ? 4 : 0,
-      position: trigger ? "sticky" : "absolute",
-      className: trigger ? classes.sticky : classes.absolute,
+      elevation: trigger || matches ? 4 : 0,
+      position: matches ? "sticky" : trigger ? "sticky" : "absolute",
+      className: matches ? classes.sticky : trigger ? classes.sticky : classes.absolute,
     }
   );
 }
@@ -39,17 +45,22 @@ const useStyles = makeStyles(theme => ({
     top: "50px",
     right: "75px",
     width: "fit-content",
+    
   },
   sticky: {
     top: 0,
     right: 0,
     width: "100%",
+ 
   },
   menuButton: { 
     marginRight: theme.spacing(2),
   },
   toolbar: {
     justifyContent: "flex-end",
+    [theme.breakpoints.down('xs')]: {
+      justifyContent: "center",
+    }
   },
 }));
 
@@ -87,6 +98,7 @@ export default function ElevateAppBar(props) {
             </Toolbar>
           </AppBar>
       </ElevationScroll>
+      <BackToTopButton />
     </React.Fragment>
   );
 }
