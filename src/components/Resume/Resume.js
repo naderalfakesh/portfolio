@@ -46,7 +46,7 @@ export default function Resume() {
       </div>
       <div className={classes.section}>
       <Typography color="textPrimary" variant="h4" gutterBottom={true}>
-            My Skils
+            My Skills
           </Typography>
           <ChipList list={skillsList} />
       </div>
@@ -72,46 +72,46 @@ const jobList = [
     title: "Sales consultant @ Dal Elektrik Motors",
     date: "2016-present",
     body:
-      "Sales consultant @ Dal Elektrik Motors Sales consultant @ Dal Elektrik Motors"
+      "Dealing with customer inquiries domestic and International on daily basis. "
   },
   {
     title: "Database Developer @ Hyper Technology L.L.C.",
     date: "2013-2015",
     body:
-      "Database Developer @ Hyper Technology L.L.C.  Database Developer @ Hyper Technology L.L.C."
+      "Making periodic reports , Maintaining the integrity of the data and fixing bugs on CRUD user interface.Technologies we used : IBM AS400 operation system with RPGLE programming language on server side."
   }
 ];
 const eduList = [
   {
     title: "Computer Engineering @ Damascus University",
     date: "2008-2013",
-    body: "Bachelors degree with 75,03% score"
+    body: "I have a bachelors degree with 75,03% score"
   },
   {
     title: "Frontend dev bootcamp @ FlatIron & Re:coded",
     date: "2020",
-    body: "React"
+    body: "Completed the frontend bootcamp on FlatIron school with alot of training with Re:coded NGO starting from fundementals ending with REACT in production apps"
   },
   {
     title: "Frontend dev bootcamp @ Kodluyoruz.org",
     date: "2019",
-    body: "General"
+    body: "72 hours of training on React and general frontend aspects."
   },
   {
     title: "Machine learning bootcamp @ Kodluyoruz.org",
     date: "2019",
-    body: "React"
+    body: "60 hours spend on python training with NLP project."
   },
   {
-    title: "IOT Introduction @ Habitat.org",
+    title: "IOT Introduction workshop @ Habitat.org",
     date: "2019",
-    body: "React"
+    body: "Three days workshop on IOT general info and applying on Arduino and Raspberry pi development boards. "
   },
   {
     title: "Various learnigng content",
     date: "Always",
     body:
-      "I spend alot of time on online learning platforms such as Udacity , Coursera ,Udemy and youtube"
+      "I spend alot of time on online learning platforms such as Udacity, Coursera, Udemy and youtube."
   }
 ];
 
