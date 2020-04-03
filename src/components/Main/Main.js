@@ -1,8 +1,6 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-// import spaceBg from "../Assets/spaceBg.jpg";
-import TypistMain from "../TypistMain"
-import Wave from "../Wave"
+import { Typography  } from "@material-ui/core";
 
 
 const useStyles = makeStyles(theme => ({
@@ -28,8 +26,8 @@ const useStyles = makeStyles(theme => ({
   },
   
   header: {
-    zIndex: 1,
-    backgroundColor: "rgba(0,0,0,0.5)",
+    zIndex: 100,
+    backgroundColor: "rgba(0,0,0,0.7)",
     padding: "1em 2em",
     margin: "1em 2em",
     color: "white",
@@ -51,8 +49,10 @@ export default function Main() {
   return (
     <div className={classes.main}>
       <div className={classes.header}>
-        <h1>Hello, I'm <span className={classes.name}>NADIR ALFAKESH</span></h1>
-        <p>WEB developer</p>
+
+        <Typography variant="h1" >Hello, I'm <span className={classes.name}>NADIR ALFAKESH</span></Typography >
+        <Typography variant="h5" >Tech enthusiast , WEB developer </Typography >
+        <Typography variant="caption" >nader.alfakesh@gmail.com </Typography >
       </div>
 
       {/* <div className={classes.header}>
