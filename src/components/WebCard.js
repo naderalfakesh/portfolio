@@ -6,7 +6,7 @@ import WebIcon from "@material-ui/icons/Web";
 const useStyles = makeStyles(theme => ({
   card: {
     position: "relative",
-    margin: "20px 0",
+    // margin: "20px 0",
     width: "300px",
     height: "400px",
     background: "#fff",
@@ -14,19 +14,33 @@ const useStyles = makeStyles(theme => ({
     transform: "perspective(2000px)",
     transition: "1s",
     boxShadow: "inset 300px 0 50px rgba(0,0,0,.5)",
+    zIndex: 2,
     "&:hover": {
       transform: "perspective(2000px) rotate(-10deg) ",
-      boxShadow: "inset 20px 0 50px rgba(0,0,0,.5)"
+      boxShadow: "inset 20px 0 50px rgba(0,0,0,.5)",
+      zIndex: 5,
     },
     "&:hover div:first-child ": {
       transform: "rotateY(-135deg)"
-    }
+    },
+    [theme.breakpoints.down('md')]: {
+      width: "270px",
+      height: "360px",
+    },
+    [theme.breakpoints.down('sm')]: {
+      width: "240px",
+      height: "320px",
+    },
+    [theme.breakpoints.down('xs')]: {
+      width: "300px",
+      height: "400px",
+    },
   },
   imgBox: {
     position: "relative",
     width: "100%",
     height: "100%",
-    boxShadow: "10px 0 50px rgba(0,0,0,.5)",
+    boxShadow: "10px 0 20px rgba(0,0,0,.5)",
     boxSizing: "border-box",
     transformOrigin: "left",
     zIndex: 1,

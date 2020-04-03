@@ -24,7 +24,7 @@ export default function TimeLine(props) {
     const classes = useStyles();
     return (
         <ul className={classes.mainTL}>
-            {props.items.map(item=><TimeLineItem title={item.title} date={item.date} body={item.body} />)}
+            {props.items.map(item=><TimeLineItem key={Math.random()} title={item.title} date={item.date} body={item.body} />)}
         </ul>
     )
 }

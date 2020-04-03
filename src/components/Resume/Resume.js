@@ -1,9 +1,10 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import { Typography } from "@material-ui/core";
-import TimeLine from "./TimeLine";
-import ChipList from "./ChipList";
-import Wave from "./Wave"
+import TimeLine from "../TimeLine";
+import ChipList from "../ChipList";
+// import Wave from "../Wave"
+import Wave from "../utilities/Wave"
  
 const useStyles = makeStyles(theme => ({
   main: {
@@ -13,18 +14,24 @@ const useStyles = makeStyles(theme => ({
     flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "center",
-    alignItems: "flex-start",
-    // fontSize: "2em",
     position: "relative",
-    padding: "120px 0 70px 0"
+    padding: "20px 0 70px 0",
+    [theme.breakpoints.down('sm')]: {
+      },
+    [theme.breakpoints.down('xs')]: {
+    },
   },
   section: {
-    padding: "0 20px",
-    width: "100%",
+    padding: "30px 20px",
     flexBasis: "50%",
-    "& h2": {
-      marginLeft: "20px"
-    }
+    "& h4": {
+      padding: "30px 20px"
+    },
+    [theme.breakpoints.down('sm')]: {
+      flexBasis: "100%",
+      },
+    [theme.breakpoints.down('xs')]: {
+    },
   },
 }));
 export default function Resume() {
@@ -32,22 +39,16 @@ export default function Resume() {
   return (
     <div className={classes.main}>
       <div className={classes.section}>
-      <Typography color="textPrimary" variant="h4" gutterBottom={true}>
-            My Skils
-          </Typography>
-          <ChipList list={skillsList} />
-      </div>
-      <div className={classes.section}>
-      <Typography color="textPrimary" variant="h4" gutterBottom={true}>
-            My interests
-          </Typography>
-          <ChipList list={InterestsList} color="secondary" />
-      </div>
-      <div className={classes.section}>
           <Typography color="textPrimary" variant="h4" gutterBottom={true}>
             Job Experience
           </Typography>
           <TimeLine items={jobList} />
+      </div>
+      <div className={classes.section}>
+      <Typography color="textPrimary" variant="h4" gutterBottom={true}>
+            My Skils
+          </Typography>
+          <ChipList list={skillsList} />
       </div>
       <div className={classes.section}>
         <Typography color="textPrimary" variant="h4" gutterBottom={true}>
@@ -55,7 +56,13 @@ export default function Resume() {
         </Typography>
         <TimeLine items={eduList} />
       </div>
-      <Wave color="white" flip/>
+      <div className={classes.section}>
+      <Typography color="textPrimary" variant="h4" gutterBottom={true}>
+            My interests
+          </Typography>
+          <ChipList list={InterestsList} color="secondary" />
+      </div>
+      <Wave color="white"/>
     </div>
   );
 }

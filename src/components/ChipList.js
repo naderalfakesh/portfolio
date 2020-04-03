@@ -7,19 +7,20 @@ const useStyles = makeStyles(theme => ({
         display: 'flex',
         justifyContent: 'center',
         flexWrap: 'wrap',
-        padding: theme.spacing(1),
+        padding: "2em",
       },
       chip: {
-        margin: theme.spacing(1),
+        margin: ".5em 1em",
       },
 }));
 
 export default function ChipList({list,color}) {
   const classes = useStyles();
     return (
-        <Paper className={classes.root} >
+        <Paper className={classes.root} elevation={3} >
             {list.map((item,i)=> 
-            <Chip 
+            <Chip
+            key={Math.random()} 
             label={item} 
             className={classes.chip} 
             variant="outlined"
