@@ -36,20 +36,26 @@ export default function Portfolio() {
       <Card
         image={site1}
         title={"Natakallam"}
-        description={"This is a real client project done by a team of bootcamp graduates including me, Used React and material UI frameworks."}
+        description={
+          "This is a real client project done by a team of bootcamp graduates including me, Used React and material UI frameworks."
+        }
         preview={"https://ntk.netlify.app/"}
       />
       <Card
         image={site2}
         title={"ABTrend shoes"}
-        description={"This page was made for a technical test for a web development agency,Implementation of home page using pure css and html"}
+        description={
+          "This page was made for a technical test for a web development agency,Implementation of home page using pure css and html"
+        }
         code={"https://github.com/naderalfakesh/abtrend_test"}
         preview={"https://naderalfakesh.github.io/abtrend_test/"}
       />
       <Card
         image={site3}
         title={"King of thieves game"}
-        description={"A mock of android game “King of thieves” made for a technical interview, An emulation of gravity using Jquery, html and javascript."}
+        description={
+          "A mock of android game “King of thieves” made for a technical interview, An emulation of gravity using Jquery, html and javascript."
+        }
         code={"https://github.com/naderalfakesh/Kingofthieves"}
         preview={"https://naderalfakesh.github.io/Kingofthieves/"}
       />

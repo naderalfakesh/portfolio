@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core/styles";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import WebIcon from "@material-ui/icons/Web";
 
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   card: {
     position: "relative",
     // margin: "20px 0",
@@ -21,17 +21,17 @@ const useStyles = makeStyles(theme => ({
       zIndex: 5,
     },
     "&:hover div:first-child ": {
-      transform: "rotateY(-135deg)"
+      transform: "rotateY(-135deg)",
     },
-    [theme.breakpoints.down('md')]: {
+    [theme.breakpoints.down("md")]: {
       width: "270px",
       height: "360px",
     },
-    [theme.breakpoints.down('sm')]: {
+    [theme.breakpoints.down("sm")]: {
       width: "240px",
       height: "320px",
     },
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down("xs")]: {
       width: "300px",
       height: "400px",
     },
@@ -44,7 +44,7 @@ const useStyles = makeStyles(theme => ({
     boxSizing: "border-box",
     transformOrigin: "left",
     zIndex: 1,
-    transition: "1s"
+    transition: "1s",
   },
   cardimg: {
     position: "absolute",
@@ -53,7 +53,7 @@ const useStyles = makeStyles(theme => ({
     width: "100%",
     height: "100%",
     objectFit: "cover",
-    objectPosition: "top center"
+    objectPosition: "top center",
   },
   details: {
     position: "absolute",
@@ -72,8 +72,8 @@ const useStyles = makeStyles(theme => ({
       width: "100%",
       display: "flex",
       alignItems: "flex-end",
-      justifyContent: "space-around"
-    }
+      justifyContent: "space-around",
+    },
   },
   link: {
     fontSize: "3em",
@@ -81,8 +81,8 @@ const useStyles = makeStyles(theme => ({
     textDecoration: "none",
     "&:hover": {
       color: "#4040a1",
-    }
-  }
+    },
+  },
 }));
 
 export default function WebCard(props) {
@@ -94,24 +94,26 @@ export default function WebCard(props) {
       </div>
       <div className={classes.details}>
         <h2>{props.title}</h2>
-        <p>
-        {props.description}
-        </p>
+        <p>{props.description}</p>
         <div>
-          {
-          props.code && (
-            <a href={props.code} title="Check the code" className={classes.link}>
+          {props.code && (
+            <a
+              href={props.code}
+              title="Check the code"
+              className={classes.link}
+            >
               <GitHubIcon fontSize="inherit" />
             </a>
-          )
-          }
-          {
-            props.preview && (
-              <a href={props.preview} title="Live preview" className={classes.link}>
-                <WebIcon fontSize="inherit" />
-              </a>
-            )
-          }
+          )}
+          {props.preview && (
+            <a
+              href={props.preview}
+              title="Live preview"
+              className={classes.link}
+            >
+              <WebIcon fontSize="inherit" />
+            </a>
+          )}
         </div>
       </div>
     </div>
