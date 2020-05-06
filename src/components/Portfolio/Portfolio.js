@@ -1,13 +1,12 @@
-import React from 'react'
-import { makeStyles } from '@material-ui/core/styles';
-import Card from "../WebCard"
-import Wave from "../utilities/Wave"
-import site1 from "../../Assets/site1.jpg"
-import site2 from "../../Assets/site2.jpg"
-import site3 from "../../Assets/site3.jpg"
+import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Card from "../WebCard";
+import Wave from "../utilities/Wave";
+import site1 from "../../Assets/site1.jpg";
+import site2 from "../../Assets/site2.jpg";
+import site3 from "../../Assets/site3.jpg";
 
-
-const useStyles = makeStyles(theme => ({
+const useStyles = makeStyles((theme) => ({
   main: {
     backgroundColor: "#f2f2f2",
     height: "100%",
@@ -18,29 +17,43 @@ const useStyles = makeStyles(theme => ({
     placeItems: "center",
     padding: "0 0 5em 0",
     position: "relative",
-    [theme.breakpoints.down('sm')]: {
-    padding: "2em 0 5em 0",
-    gridTemplateColumns: "repeat(2, 1fr)",
+    [theme.breakpoints.down("sm")]: {
+      padding: "2em 0 5em 0",
+      gridTemplateColumns: "repeat(2, 1fr)",
       justifyContent: "center",
     },
-    [theme.breakpoints.down('xs')]: {
-    padding: "2em 0 5em 0",
-    gridTemplateColumns: "repeat(1, 1fr)",
+    [theme.breakpoints.down("xs")]: {
+      padding: "2em 0 5em 0",
+      gridTemplateColumns: "repeat(1, 1fr)",
     },
-  }
-})); 
-
-
+  },
+}));
 
 export default function Portfolio() {
-    const classes = useStyles();
-    return (
-        <div className={classes.main} >
-            <Card image={site1} title={"Website 1"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
-            <Card image={site2} title={"Website 2"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
-            <Card image={site3} title={"Website 3"} code={"/"} preview={"/"} description={"Made using HTML CSS ..."} />
-            {/* <Wave color="#f2f2f2" flip mirror /> */}
-            <Wave color="#f2f2f2" mirror/>
-        </div>
-    )
+  const classes = useStyles();
+  return (
+    <div className={classes.main}>
+      <Card
+        image={site1}
+        title={"Natakallam"}
+        description={"This is a real client project done by a team of bootcamp graduates including me, Used React and material UI frameworks."}
+        preview={"https://ntk.netlify.app/"}
+      />
+      <Card
+        image={site2}
+        title={"ABTrend shoes"}
+        description={"This page was made for a technical test for a web development agency,Implementation of home page using pure css and html"}
+        code={"https://github.com/naderalfakesh/abtrend_test"}
+        preview={"https://naderalfakesh.github.io/abtrend_test/"}
+      />
+      <Card
+        image={site3}
+        title={"King of thieves game"}
+        description={"A mock of android game “King of thieves” made for a technical interview, An emulation of gravity using Jquery, html and javascript."}
+        code={"https://github.com/naderalfakesh/Kingofthieves"}
+        preview={"https://naderalfakesh.github.io/Kingofthieves/"}
+      />
+      <Wave color="#f2f2f2" mirror />
+    </div>
+  );
 }

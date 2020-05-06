@@ -52,7 +52,8 @@ const useStyles = makeStyles(theme => ({
     left: 0,
     width: "100%",
     height: "100%",
-    objectFit: "cover"
+    objectFit: "cover",
+    objectPosition: "top center"
   },
   details: {
     position: "absolute",
@@ -97,12 +98,20 @@ export default function WebCard(props) {
         {props.description}
         </p>
         <div>
-          <a href={props.code} title="Check the code" className={classes.link}>
-            <GitHubIcon fontSize="inherit" />
-          </a>
-          <a href={props.preview} title="Live preview" className={classes.link}>
-            <WebIcon fontSize="inherit" />
-          </a>
+          {
+          props.code && (
+            <a href={props.code} title="Check the code" className={classes.link}>
+              <GitHubIcon fontSize="inherit" />
+            </a>
+          )
+          }
+          {
+            props.preview && (
+              <a href={props.preview} title="Live preview" className={classes.link}>
+                <WebIcon fontSize="inherit" />
+              </a>
+            )
+          }
         </div>
       </div>
     </div>
