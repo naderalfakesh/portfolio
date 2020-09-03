@@ -66,8 +66,14 @@ export default function Resume() {
 
 const jobList = [
   {
+    title: "Frontend Developer @ Kolay ik yazılım A.Ş.",
+    date: "09/2020-present",
+    body:
+      "I recently joined development team at kolay ik company",
+  },
+  {
     title: "Sales consultant @ Dal Elektrik Motors",
-    date: "2016-present",
+    date: "02/2016-08/2020",
     body:
       "Dealing with customer inquiries domestic and International on daily basis. ",
   },

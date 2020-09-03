@@ -5,6 +5,7 @@ import Wave from "../utilities/Wave";
 import site1 from "../../Assets/site1.jpg";
 import site2 from "../../Assets/site2.jpg";
 import site3 from "../../Assets/site3.jpg";
+import movieExplorer from "../../Assets/movieExplorer.jpg";
 
 const useStyles = makeStyles((theme) => ({
   main: {
@@ -15,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
     gridGap: "20px",
     justifyContent: "space-evenly",
     placeItems: "center",
-    padding: "0 0 5em 0",
+    padding: "3em 0 10em 0",
     position: "relative",
     [theme.breakpoints.down("sm")]: {
       padding: "2em 0 5em 0",
@@ -33,6 +34,15 @@ export default function Portfolio() {
   const classes = useStyles();
   return (
     <div className={classes.main}>
+      <Card
+        image={movieExplorer}
+        title={"Natakallam"}
+        description={
+          "I adapted the Container/view design pattern in React while using functional components with hooks. CSS Material UI , Data source restful API"
+        }
+        code={"https://github.com/naderalfakesh/movie-explorer"}
+        preview={"https://naderalfakesh.github.io/movie-explorer"}
+      />
       <Card
         image={site1}
         title={"Natakallam"}

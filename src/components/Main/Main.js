@@ -39,6 +39,15 @@ const useStyles = makeStyles((theme) => ({
   name: {
     color: "#e31b6d",
   },
+  companyLink:{
+    color: "white",
+    textDecoration:"none",
+    transition: "0.3s",
+    "&:hover":{
+      color: "#e31b6d",
+    }
+
+  }
 }));
 
 export default function Main() {
@@ -49,9 +58,9 @@ export default function Main() {
         <Typography variant="h1">
           Hello, I'm <span className={classes.name}>NADIR ALFAKESH</span>
         </Typography>
-        <Typography variant="h5">Tech enthusiast , WEB developer </Typography>
+        <Typography variant="h5">Tech enthusiast , Frontend developer <a className={classes.companyLink} href="http://www.kolayik.com" target="_blank" rel="noopener noreferrer" >@Kolayik </a> </Typography>
         <Typography variant="subtitle2">nader.alfakesh@gmail.com </Typography>
-        <Typography variant="caption">+90 530 306 5849</Typography>
+        <Typography variant="caption">+90 545 693 9297</Typography>
       </div>
 
     </div>
